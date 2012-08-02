@@ -6,6 +6,11 @@ var Timer = (function() {
 
 	var start_time, end_time;
 	var running_timer;
+
+	function reset() {
+		state = Waiting;
+		clearInterval(running_timer);
+	}
 	
 	function set_running() {
 		start_time = Date.now();
@@ -44,6 +49,7 @@ var Timer = (function() {
 	}
 
 	return {
+		'reset': reset,
 		'trigger_down': trigger_down,
 		'trigger_up': trigger_up,
 		'get_time': get_time,

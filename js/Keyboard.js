@@ -10,7 +10,7 @@ var Keyboard = (function() {
 		return 'Keyboard.' + dir + (shift ? '.shift.' : '.') + key;
 	}
 
-	var key_names = {'space': 32};
+	var key_names = {'space': 32, 'esc': 27};
 
 	function split_key(key) {
 		var ary = key.split('+');

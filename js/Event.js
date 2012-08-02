@@ -12,8 +12,7 @@ var Events = (function() {
 		var fns_ = fns[name];
 		if(!fns_) return;
 		
-		var i = fns_.length;
-		while(i--) {
+		for(var i = 0, l = fns_.length; i < l; i++) {
 			fns_[i](args);
 		}
 	}
